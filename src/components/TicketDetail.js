@@ -1,8 +1,8 @@
-import react from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 function TicketDetail(props) {
-  const { ticket } = props;
+  const { ticket } = props;  // this is object destructuring
 
   return (
     <React.Fragment>

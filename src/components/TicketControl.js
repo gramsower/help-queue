@@ -12,15 +12,8 @@ class TicketControl extends React.Component {
       formVisibleOnPage: false,
       mainTicketList: [],
       selectedTicket: null
-
     };
   }
-
-  handleAddingNewTicketToList = (newTicket) => {
-    const newMainTicketList = this.state.mainTicketList.concat(newTicket);
-    this.setState({mainTicketList: newMainTicketList, 
-                  formVisibleOnPage: false });
-    }
 
   handleClick = () => {
     if (this.state.selectedTicket !=null) {
@@ -34,6 +27,12 @@ class TicketControl extends React.Component {
       }));
     }
   }
+
+  handleAddingNewTicketToList = (newTicket) => {
+    const newMainTicketList = this.state.mainTicketList.concat(newTicket);
+    this.setState({mainTicketList: newMainTicketList, 
+                  formVisibleOnPage: false })
+    }
 
   handleChangingSelectedTicket = (id) => {
     const selectedTicket = this.state.mainTicketList.filter(ticket => ticket.id === id)[0];
